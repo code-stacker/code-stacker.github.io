@@ -1,1 +1,51 @@
-TEST PASSED
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog4Star</title>
+    <style>
+        .btn {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        #main {
+            background-color: violet;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            font-size: 500%;
+            color: gray;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#main").hover(function(){
+                $(this).fadeTo(100,0.8);
+            },
+            function(){
+                $(this).fadeTo(100,1);
+            });
+            $("#main").click(function(){
+                $(this).slideUp(1000,function(){
+
+                    $(this).slideDown(1000);
+                    $(this).text("see that?");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="btn">
+        <h1 style="font-size: 250%; background-color: aqua">Press The Button</h1>
+        <h3 style="background-color: red"><em>to see the magic</em></h3>
+        <button id="main" name="main">HERE</button>
+    </div>
+</body>
+</html>
